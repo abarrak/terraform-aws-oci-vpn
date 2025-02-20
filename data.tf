@@ -29,7 +29,7 @@ data "oci_core_drg_route_tables" "drg_hub_route_tables" {
   drg_id = data.oci_core_drgs.hub_drg.drgs[0].id
 }
 
-data "oci_core_ipsec_connection_tunnels" "aws_vpn_tunnels" {
+data "oci_core_ipsec_connection_tunnels" "oci_vpn_tunnels" {
   count    = var.oci_vpn_tunnels_management_supported ? 1 : 0
   ipsec_id = oci_core_ipsec.oci_vpn_ipsec_connection.id
 }
