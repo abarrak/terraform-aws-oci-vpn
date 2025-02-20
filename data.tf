@@ -30,8 +30,8 @@ data "oci_core_drg_route_tables" "drg_hub_route_tables" {
 }
 
 data "oci_core_ipsec_connection_tunnels" "aws_vpn_tunnels" {
-  count    = var.aws_hub_tunnels_management_supported ? 1 : 0
-  ipsec_id = oci_core_ipsec.aws_hub_ipsec_connection.id
+  count    = var.oci_vpn_tunnels_management_supported ? 1 : 0
+  ipsec_id = oci_core_ipsec.oci_vpn_ipsec_connection.id
 }
 
 data "oci_core_cpe_device_shapes" "oci_cpe_shapes" { }

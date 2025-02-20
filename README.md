@@ -4,7 +4,16 @@
 
 This module provides ability to provising IPSec VPN connection between AWS and Oracle (oci) clouds.
 
-## Features
+## Connectivity Notes
+
+The modules should be provision in 2 phases order to provision each side per the documentation, including temporary CPE in the beginning. Suggested Order:
+<blockquote>
+1. main.tf <br>
+2. aws.tf <br>
+3. oci.tf <br>
+</blockquote>
+
+Additionally, to established HA setup the cpe resources creation step can be repeated.
 
 ## Usage
 
