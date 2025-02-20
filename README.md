@@ -20,7 +20,7 @@ Additionally, to established HA setup the cpe resources creation step can be rep
 
 ```hcl
 module "aws-oci-vpn" {
-  source  = "abarrak/vpn/aws-oci-vpn"
+  source  = "abarrak/oci-vpn/aws"
   version = "1.0.0"
 }
 ```
